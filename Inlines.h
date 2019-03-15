@@ -15,4 +15,5 @@ inline T operator++(T &e, int)
     ++e;
     return result;
 }
+
 #endif

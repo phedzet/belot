@@ -7,12 +7,16 @@
 class Deck
 {
 public:
+    // ctor and dtor
     Deck();
     ~Deck();
 
+    // public functions
     void shuffleCards();
     void createDeck();
+    std::vector<Card> getCards();
 private:
+    // member variables
     std::vector<Card> _cards;
     const int _max_cards = 32;
     const int _max_numbers = 8;

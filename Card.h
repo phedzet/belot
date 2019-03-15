@@ -2,6 +2,7 @@
 #define BELOT_CARD_H
 
 #include <iostream>
+#include <string>
 #include <Inlines.h>
 
 class Card
@@ -10,6 +11,9 @@ public:
     // enum classes
     enum class Number { Begin, VII = Begin, VIII, IX, X, J, Q, K, A, End };
     enum class Color { Begin, Hearts = Begin, Clubs, Diamonds, Spades, End };
+
+    std::string numberToString(Number number);
+    std::string colorToString(Color color);
 
     // ctor and dtor
     Card(Number number, Color color, int value = 0);

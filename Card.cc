@@ -9,7 +9,7 @@ Card::Card(Number number, Color color, int value)
 
 Card::~Card()
 {
-    
+
 }
 
 void Card::setNumber(Number number)
@@ -40,4 +40,42 @@ Card::Color Card::getColor()
 int Card::getValue()
 {
     return _value;
+}
+
+std::string Card::numberToString(Number number)
+{
+    switch (number)
+    {
+        case  Card::Number::VII:
+            return "VII";
+        case  Card::Number::VIII:
+            return "VIII";
+        case  Card::Number::IX:
+            return "IX";
+        case  Card::Number::X:
+            return "X";
+        case  Card::Number::J:
+            return "J";
+        case  Card::Number::Q:
+            return "Q";
+        case  Card::Number::K:
+            return "K";
+        case  Card::Number::A:
+            return "A";
+    }
+}
+
+std::string Card::colorToString(Color color)
+{
+    switch(color)
+    {
+        case Card::Color::Clubs:
+            return "Clubs";
+        case Card::Color::Diamonds:
+            return "Diamonds";
+        case Card::Color::Spades:
+            return "Spades";
+        case Card::Color::Hearts:
+            return "Hearts";
+    }
 }
